@@ -17,7 +17,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG')
 
-ALLOWED_HOSTS = [env.list('ALLOWED_HOSTS_DEV')]
+#ALLOWED_HOSTS = [env.list('ALLOWED_HOSTS_DEV')]
 
 
 # Application definition
@@ -70,7 +70,7 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'build')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -120,13 +120,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
 LANGUAGE_CODE = 'es'
-
-TIME_ZONE = 'UTC-6'
-
+TIME_ZONE = 'UTC'
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
 
 
@@ -154,14 +150,14 @@ REST_FRAMEWORK = {
 }
 
 CORS_ORIGIN_WHITELIST = env.list('CORS_ORIGIN_WHITELIST_DEV')
-CSRF_TRUSTED_ORIGINGS = env.list('CSRF_TRUSTED_ORIGINGS_DEV')
+CSRF_TRUSTED_ORIGINS = env.list('CSRF_TRUSTED_ORIGINS_DEV')
 
 EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
 
 if not DEBUG:
     ALLOWED_HOSTS=env.list('ALLOWED_HOSTS_DEPLOY')
     CORS_ORIGIN_WHITELIST = env.list('CORS_ORIGIN_WHITELIST_DEPLOY') 
-    CSRF_TRUSTED_ORIGINGS = env.list('CSRF_TRUSTED_ORIGINGS_DEPLOY')
+    CSRF_TRUSTED_ORIGINGS = env.list('CSRF_TRUSTED_ORIGINS_DEPLOY')
     DATABASES = {
         'default': env.db('DATABASE_URL'),
     }
