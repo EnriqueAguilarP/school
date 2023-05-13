@@ -2,16 +2,16 @@ import Layout from "hocs/layouts/Layout"
 import Navbar from "components/navigation/Navbar"
 import Footer from "components/navigation/Footer"
 
-function Home(){
+function Admission(){
     return (
         <Layout>
             <Navbar />
             <div className="pt-28">
-                Home
+                Admission
             </div>
             <Footer />
         </Layout>
     )
 }
 
-export default Home
+export default Admission
