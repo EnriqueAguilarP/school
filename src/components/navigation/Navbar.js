@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import IMG from '../../assets/img/logo.jpg'
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 function Navbar(){
     return(
@@ -18,21 +18,19 @@ function Navbar(){
                             />
                         </Link>
                             <div className="ml-4 mt-2 flex-shrink-0">
-                            <Link to='/engineering' className="text-lg inline-flex font-medium leading-6 text-gray-900 border-b-2 border-white hover:border-blue-500 transition duration-300 ease-in-out mx-4">Engineering</Link>
-                            <Link to='/courses' className="text-lg inline-flex font-medium leading-6 text-gray-900 border-b-2 border-white hover:border-blue-500 transition duration-300 ease-in-out mx-4">Courses</Link>
-                            <Link to='/languages' className="text-lg inline-flex font-medium leading-6 text-gray-900 border-b-2 border-white hover:border-blue-500 transition duration-300 ease-in-out mx-4">Languages</Link>
-                            <Link to='/admission' className="text-lg inline-flex font-medium leading-6 text-gray-900 border-b-2 border-white hover:border-blue-500 transition duration-300 ease-in-out mx-4">Admission</Link>
-                            <Link to='/about' className="text-lg inline-flex font-medium leading-6 text-gray-900 border-b-2 border-white hover:border-blue-500 transition duration-300 ease-in-out mx-4">About us</Link>
-                            <Link to='/contact' className="text-lg inline-flex font-medium leading-6 text-gray-900 border-b-2 border-white hover:border-blue-500 transition duration-300 ease-in-out mx-4">Contact</Link>
-                        
+                            <NavLink to='/engineering' className="text-lg inline-flex font-medium leading-6 text-gray-900 border-b-2 border-white hover:border-blue-500 transition duration-300 ease-in-out mx-4">Engineering</NavLink>
+                            <NavLink to='/courses' className="text-lg inline-flex font-medium leading-6 text-gray-900 border-b-2 border-white hover:border-blue-500 transition duration-300 ease-in-out mx-4">Courses</NavLink>
+                            <NavLink to='/languages' className="text-lg inline-flex font-medium leading-6 text-gray-900 border-b-2 border-white hover:border-blue-500 transition duration-300 ease-in-out mx-4">Languages</NavLink>
+                            <NavLink to='/admission' className="text-lg inline-flex font-medium leading-6 text-gray-900 border-b-2 border-white hover:border-blue-500 transition duration-300 ease-in-out mx-4">Admission</NavLink>
+                            <NavLink to='/about' className="text-lg inline-flex font-medium leading-6 text-gray-900 border-b-2 border-white hover:border-blue-500 transition duration-300 ease-in-out mx-4">About us</NavLink>
+                            <NavLink to='/contact' className="text-lg inline-flex font-medium leading-6 text-gray-900 border-b-2 border-white hover:border-blue-500 transition duration-300 ease-in-out mx-4">Contact</NavLink>
+
                             <Link
                                 to="/contact"
                                 className="inline-flex ml-12 items-center rounded-md border border-transparent bg-blue-700 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-green-900 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                             >
-                            Register Me
-                           
+                            Register Me                           
                             </Link>
-                            
                             </div>
                         </div>
                     </div>

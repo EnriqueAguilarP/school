@@ -8,6 +8,7 @@ import About from "containers/pages/About";
 import Admission from "containers/pages/Admission";
 import Contact from "containers/pages/Contact";
 import Languages from "containers/pages/Languages";
+import Courses from "containers/pages/Courses";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
             <Route path="/about" element= { <About /> } />
             <Route path="/admission" element= { <Admission /> } />
             <Route path="/contact" element= { <Contact /> } />
-            <Route path="/courses" element= { <Courses /> } />
+            <Route path="/courses" element= { <Courses/> } />
             <Route path="/languages" element= { <Languages /> } />
             <Route path="/" element= { <Home /> } />
           </Routes>
