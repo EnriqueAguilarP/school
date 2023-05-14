@@ -1,32 +1,24 @@
-import IM1 from '../../assets/img/electric.jpg'
-import IM2 from '../../assets/img/civil.jpg'
-import IM3 from '../../assets/img/industrial.jpg'
-import IM4 from '../../assets/img/software.jpg'
-
-
+import IM2 from './../../assets/img/civil.jpg'
+import IM3 from './../../assets/img/industrial.jpg'
+import IM4 from './../../assets/img/software.jpg'
 
 const careers = [
     {
-      name: 'Electrical Engineer',
-      imageSrc: {IM1},
-      description: "It's not actually free we just price it into the products. Someone's paying for it, and it's not us.",
-    },
-    {
       name: 'Civil Engineer',
-      imageSrc: {IM2},
-      description: "If it breaks in the first 10 years we'll replace it. After that you're on your own though.",
+      imageSrc: IM2,
+      description: "A civil engineer is someone who designs and executes structural works that serve the general public, such as dams, bridges, canals, highways, power plants, sewerage systems, and other infrastructure",
     },
     {
       name: 'Industrial Engineer',
-      imageSrc: {IM3},
+      imageSrc: IM3,
       description:
-        "If you don't like it, trade it to one of your friends for something of theirs. Don't send it here though.",
+        "An industrial engineer is someone who optimizes complex processes, systems, or organizations by developing, improving and implementing integrated systems of people, money, knowledge, information and equipment",
     },
     {
         name: 'Software Engineer',
-        imageSrc: {IM4},
+        imageSrc: IM4,
         description:
-          "If you don't like it, trade it to one of your friends for something of theirs. Don't send it here though.",
+          "Software engineering is a branch of computer science that deals with the design, development, testing, and maintenance of software applications",
       },
   ]
 
@@ -48,10 +40,10 @@ function Careers(){
               {careers.map((career) => (
                 <div key={career.name} className="sm:flex lg:block">
                   <div className="sm:flex-shrink-0">
-                    <img className="h-16 w-16" src={career.imageSrc} alt="" />
+                    <img className="h-30" src={career.imageSrc} alt="" />
                   </div>
                   <div className="mt-4 sm:mt-0 sm:ml-6 lg:mt-6 lg:ml-0">
-                    <h3 className="text-sm font-medium text-gray-900">{career.name}</h3>
+                    <h3 className="text-3xl font-medium text-gray-900">{career.name}</h3>
                     <p className="mt-2 text-sm text-gray-500">{career.description}</p>
                   </div>
                 </div>

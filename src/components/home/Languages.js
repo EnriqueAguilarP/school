@@ -1,57 +1,31 @@
-const posts = [
+import L1 from './../../assets/img/german.jpg'
+import L2 from './../../assets/img/italian.jpg'
+import L3 from './../../assets/img/chinese.jpg'
+
+const languages = [
     {
-      title: 'Boost your conversion rate',
+      title: 'German',
       href: '#',
-      category: { name: 'Article', href: '#' },
+      category: { name: 'Level A2', href: '#' },
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.',
-      date: 'Mar 16, 2020',
-      datetime: '2020-03-16',
-      imageUrl:
-        'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
-      readingTime: '6 min',
-      author: {
-        name: 'Roel Aufderehar',
-        href: '#',
-        imageUrl:
-          'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-      },
+        'Our German course is designed for learners of all levels, from beginners to advanced. You will learn the basics of grammar, vocabulary, pronunciation, and culture through engaging and interactive activities. You will also practice your listening, speaking, reading, and writing skills with authentic materials and real-life situations.',
+      imageUrl: L1
     },
     {
-      title: 'How to use search engine optimization to drive sales',
+      title: 'Italian',
       href: '#',
-      category: { name: 'Video', href: '#' },
+      category: { name: 'Level A1', href: '#' },
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.',
-      date: 'Mar 10, 2020',
-      datetime: '2020-03-10',
-      imageUrl:
-        'https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
-      readingTime: '4 min',
-      author: {
-        name: 'Brenna Goyette',
-        href: '#',
-        imageUrl:
-          'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-      },
+        'If you have no previous knowledge of Italian or just a few words, our Italian course level A1 is perfect for you. In this course, you will learn the basics of Italian grammar, vocabulary, pronunciation, and culture. You will be able to introduce yourself, ask and answer simple questions, talk about your family, hobbies, and daily routine',
+      imageUrl: L2
     },
     {
-      title: 'Improve your customer experience',
+      title: 'Chinese',
       href: '#',
-      category: { name: 'Case Study', href: '#' },
+      category: { name: 'Level B1', href: '#' },
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.',
-      date: 'Feb 12, 2020',
-      datetime: '2020-02-12',
-      imageUrl:
-        'https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
-      readingTime: '11 min',
-      author: {
-        name: 'Daniela Metz',
-        href: '#',
-        imageUrl:
-          'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-      },
+        'You will be able to understand the main points of clear standard input on familiar matters regularly encountered in work, school, leisure, etc. You will also be able to deal with most situations likely to arise while traveling in an area where Chinese is spoken. ',
+      imageUrl: L3
     },
   ]
   
@@ -63,48 +37,30 @@ const posts = [
         </div>
         <div className="relative mx-auto max-w-7xl">
           <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">From the blog</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Languages Center</h2>
             <p className="mx-auto mt-3 max-w-2xl text-xl text-gray-500 sm:mt-4">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.
+            Welcome to the Languages Center, a place where you can learn and practice different languages with qualified instructors
+             and modern resources. Whether you want to improve your German, Italian, Chinese or Japanese, we have a course that suits 
+             your needs and goals.
             </p>
           </div>
           <div className="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
-            {posts.map((post) => (
-              <div key={post.title} className="flex flex-col overflow-hidden rounded-lg shadow-lg">
+            {languages.map((language) => (
+              <div key={language.title} className="flex flex-col overflow-hidden rounded-lg shadow-lg">
                 <div className="flex-shrink-0">
-                  <img className="h-48 w-full object-cover" src={post.imageUrl} alt="" />
+                  <img className="h-48 w-full object-cover" src={language.imageUrl} alt="" />
                 </div>
                 <div className="flex flex-1 flex-col justify-between bg-white p-6">
                   <div className="flex-1">
                     <p className="text-sm font-medium text-indigo-600">
-                      <a href={post.category.href} className="hover:underline">
-                        {post.category.name}
+                      <a href={language.category.href} className="hover:underline">
+                        {language.category.name}
                       </a>
                     </p>
-                    <a href={post.href} className="mt-2 block">
-                      <p className="text-xl font-semibold text-gray-900">{post.title}</p>
-                      <p className="mt-3 text-base text-gray-500">{post.description}</p>
+                    <a href={language.href} className="mt-2 block">
+                      <p className="text-xl font-semibold text-gray-900">{language.title}</p>
+                      <p className="mt-3 text-base text-gray-500">{language.description}</p>
                     </a>
-                  </div>
-                  <div className="mt-6 flex items-center">
-                    <div className="flex-shrink-0">
-                      <a href={post.author.href}>
-                        <span className="sr-only">{post.author.name}</span>
-                        <img className="h-10 w-10 rounded-full" src={post.author.imageUrl} alt="" />
-                      </a>
-                    </div>
-                    <div className="ml-3">
-                      <p className="text-sm font-medium text-gray-900">
-                        <a href={post.author.href} className="hover:underline">
-                          {post.author.name}
-                        </a>
-                      </p>
-                      <div className="flex space-x-1 text-sm text-gray-500">
-                        <time dateTime={post.datetime}>{post.date}</time>
-                        <span aria-hidden="true">&middot;</span>
-                        <span>{post.readingTime} read</span>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
